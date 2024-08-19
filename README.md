@@ -1,3 +1,3 @@
 ## Prerequisites
-- Node.js Playwright is node library
+- Node.js (Playwright is node library)
 
