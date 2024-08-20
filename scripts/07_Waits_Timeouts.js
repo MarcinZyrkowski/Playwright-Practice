@@ -22,25 +22,25 @@ const expect = require("expect");
   await page.click('form >> "Sign in"', { timeout: 45000 });
 
   // // static wait
-  // await page.waitForTimeout(5000)
+  await page.waitForTimeout(5000);
 
   // waiting for selector
-  // await page.waitForSelector('.ion-compose')
+  await page.waitForSelector(".ion-compose");
 
   // waitint for navigation
-  // await Promise.all([
-  //     page.waitForNavigation(), // The promise resolves after navigation has finished
-  //     await page.click('form >> "Sign in"'), // Clicking the button will indirectly cause a navigation
-  //   ])
+  await Promise.all([
+    page.waitForNavigation(), // The promise resolves after navigation has finished
+    await page.click('form >> "Sign in"'), // Clicking the button will indirectly cause a navigation
+  ]);
 
   // waiting for event
-  // const [newPage] = await Promise.all([
-  //   context.waitForEvent('page'),
-  //   page.click('a[target="_blank"]') // Opens a new tab
-  // ])
+  const [newPage] = await Promise.all([
+    context.waitForEvent("page"),
+    page.click('a[target="_blank"]'), // Opens a new tab
+  ]);
 
   // waititng for load state
-  // await page.waitForLoadState()
+  await page.waitForLoadState();
 
   await browser.close();
 })();
