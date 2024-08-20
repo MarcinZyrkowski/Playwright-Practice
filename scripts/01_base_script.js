@@ -1,5 +1,5 @@
 // script code should be in arrow function
-const {chromium} = require('playwright');
+const { chromium } = require("playwright");
 
 (async () => {
   // by default playwright works in headless mode, if we want to turn it off, we need to set flag headless to false
