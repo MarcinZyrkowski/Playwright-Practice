@@ -5,6 +5,7 @@
 ## Dependencies
 - `npm install playwright`
 - `npm install expect`
+- `npm i playwright playwright-video @ffmpeg-installer/ffmpeg`
 
 ## Purpose
 
